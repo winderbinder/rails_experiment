@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= gritter
 //= require rails-ujs
 //= require turbolinks
-//= gritter
 //= require_tree .

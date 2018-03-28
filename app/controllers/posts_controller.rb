@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index 
     @posts = Post.all
+    @page_title = "Home page"
   end
 
   def new
