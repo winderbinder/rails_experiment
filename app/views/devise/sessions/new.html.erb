@@ -1,42 +1,32 @@
-<!doctype html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Sign-in</title>
-  </head>
+<title>Sign-in</title>
 <body class="text-center">
-  <form class="form-signin">
-    <h2>Log in to your CarFo account!</h2>
-    <%= image_tag "small-car.jpg", width: 250, alt:"small black car" %>
+  <h2>Log in to your CarFo account!</h2>
+  <%= image_tag "small-car.jpg", width: 250, alt:"small black car" %>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="h3 mb-3 font-weight-normal">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="h3 mb-3 font-weight-normal">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="h3 mb-3 font-weight-normal">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="checkbox mb-3">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
       </div>
+    <% end -%>
 
-      <div class="h3 mb-3 font-weight-normal">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
+    <div class="form-group">
+      <%= f.submit "Log in", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
 
-      <% if devise_mapping.rememberable? -%>
-        <div class="checkbox mb-3">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end -%>
+  <%= render "devise/shared/links" %>
 
-      <div class="btn btn-lg btn-primary btn-block">
-        <%= f.submit "Log in" %>
-      </div>
-    <% end %>
-
-    <%= render "devise/shared/links" %>
-
-    <div><%= link_to 'Back', posts_path %></div>
-  </form>
+  <div><%= link_to 'Back', posts_path %></div>
 </body>
