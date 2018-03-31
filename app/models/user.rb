@@ -15,4 +15,8 @@ class User < ApplicationRecord
     self.name.split.last
   end
 
+  def welcome_message
+    puts "Welcome back"
+  end
+
 end
