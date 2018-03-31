@@ -19,11 +19,13 @@
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
 
+            
             <%= yield %>
+            
+            <%= copyright_generator %>
 
             <%= js add_gritter(flash[:notice], title: "Account Status", sticky: false, time: 5000) %>
 
-            <%= copyright_generator %>
     </div>
   </div>
 </div>
