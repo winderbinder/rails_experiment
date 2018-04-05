@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  access [:all, :user] => [:show, :index]
+  # access [:all, :user] => [:show, :index]
   
   def index 
     @posts = Post.all
-    # @user = User.find(params[:id])
-    # @posts = @user.posts
   end
 
   def new

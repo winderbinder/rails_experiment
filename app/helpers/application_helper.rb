@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def copyright_generator
-    AlonsoViewTool::Renderer.copyright 'Alonso Hernandez', 'All rights reserved'
+    AlonsoViewTool::Renderer.copyright 'Carfo', 'All rights reserved'
   end
   
 end
