@@ -1,3 +1,9 @@
+<% if user_signed_in? %>                  
+<h1><%= "Welcome back " %><%= current_user.first_name %></h1>
+<% else %>
+<h1><%= "Welcome Guest"%></h1>
+<% end %>
+<% if current_user %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to "Sign up for a new CarFo account", new_user_registration_path %>
