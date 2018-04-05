@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  access [:all, :user] => [:show, :index]
+  
   def index 
     @posts = Post.all
+    # @user = User.find(params[:id])
+    # @posts = @user.posts
   end
 
   def new
@@ -20,7 +23,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    
+
     respond_to do |format|
     if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }

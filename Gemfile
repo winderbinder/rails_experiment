@@ -59,3 +59,5 @@ gem 'gritter', '~> 1.2'
 gem 'bootstrap', '~> 4.0.0'
 
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+
+gem 'petergate', '~> 1.8', '>= 1.8.1'
