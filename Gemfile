@@ -57,3 +57,5 @@ gem 'Alonso_gem', '~> 0.1.0'
 gem 'gritter', '~> 1.2'
 
 gem 'bootstrap', '~> 4.0.0'
+
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
