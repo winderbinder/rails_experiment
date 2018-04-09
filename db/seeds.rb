@@ -1,8 +1,8 @@
-User.create!(name: "bob", email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf")
+User.create!(name: "ello", email: "hey@hey.com", password: "asdfasdf", password_confirmation: "asdfasdf")
 puts "1 user created"
 
-10.times do |blog| 
-  Post.create!(title: "title#{blog}", body: "this is the populated body", date: "Dec 30 1995")
-end
+Post.create!(title: "title", user_id: 1, body: "this is the populated body", date: "Dec 30 1995" )
+puts "post assocoation created"
 
-puts "10 posts were created successfully"
+
+
