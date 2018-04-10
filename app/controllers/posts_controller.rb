@@ -1,10 +1,15 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
-  access all: [:show, :index], user: {except: [:destroy]}
+  # access all: [:show, :index], user: {except: [:destroy]}
   
   def index
     @posts = Post.all
+    if params[:search]
+      @search = Post.search(params[:search]).order("created_at DESC"))
+    else 
+      @search = Post.all.order("created_at DESC")
+    end
   end
 
   def new
@@ -61,6 +66,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :date)
+      params.permit(:post, :title, :search, :body, :date)
     end
 end
