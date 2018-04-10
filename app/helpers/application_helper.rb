@@ -4,7 +4,7 @@ module ApplicationHelper
     AlonsoViewTool::Renderer.copyright 'Carfo', 'All rights reserved'
   end
 
-  def alert
+  def self.alert
     alert = (flash[:alert] || flash[:error] || flash[:notice])
 
     if alert

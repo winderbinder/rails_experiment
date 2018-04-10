@@ -1,3 +1,6 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
 <% if user_signed_in? %>                  
 <h1><%= "Welcome back " %><%= current_user.first_name %></h1>
 <% else %>
@@ -12,3 +15,9 @@
 <% if current_user %>
   <%= link_to "Edit CarFo account profile", edit_user_registration_path %>
 <% end %>
+
+<%= render 'search' %>
+
+    </div>
+  </ul>
+</nav>
