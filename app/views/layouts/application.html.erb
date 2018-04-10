@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
 
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+            <%= video_tag(
+                "cars.mp4",
+                id: "background",
+                autoplay: true,
+                loop: true,
+                muted: true,
+                poster: ""
+            )
+            %>
 
-            
             <%= yield %>
             
-            <%= copyright_generator %>
+            <%= render 'shared/footer' %>
 
             <%= js add_gritter(flash[:notice], title: "Account Status", sticky: false, time: 5000) %>
 
-    </div>
-  </div>
-</div>
-
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
   </body>
 </html>
