@@ -61,3 +61,5 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.2'

@@ -2,11 +2,10 @@
   <div class="row">
 
       <div class="col-md-4">
-      <p>Title</p>
-      <p>Text</p>
-      <p>Date</p>
-  
+      
+      <%= render 'search' %>
       <%= render @posts %>
+      <%= render 'posts/current_user_permission' %>
 
     </div>
   </div>

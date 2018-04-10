@@ -15,8 +15,6 @@
   </head>
 
   <body>
-    <div class="jumbotron">
-        <div class="container">
             <%= video_tag(
                 "cars.mp4",
                 id: "background",
@@ -30,8 +28,6 @@
             <%= render 'posts/sign_in' %>
 
             <%= yield %>
-
-            <%= render 'posts/current_user_permission' %>
             
             <%= render 'shared/footer' %>
 
@@ -39,7 +35,5 @@
 
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
-        </div>
-      </div>
   </body>
 </html>
