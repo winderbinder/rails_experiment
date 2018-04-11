@@ -3,7 +3,7 @@ User.create!(
  email: "test@test.com",
  password: "asdfasdf",
  password_confirmation: "asdfasdf",
- role: "site_admin"
+ role: "admin"
 )
 puts "1 user created"
 
