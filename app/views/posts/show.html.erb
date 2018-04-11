@@ -1,18 +1,23 @@
 <p id="notice"></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+  <strong>Make:</strong>
+  <%= @post.make %>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @post.body %>
+  <strong>Model:</strong>
+  <%= @post.model %>
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @post.date %>
+  <strong>Year:</strong>
+  <%= @post.year %>
+</p>
+
+<p>
+  <strong>Trim:</strong>
+  <%= @post.trim %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %>

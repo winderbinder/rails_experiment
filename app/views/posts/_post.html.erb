@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
-  <%= post.title %>
-  <%= post.body %>
-  <%= post.date %>
+  <%= post.make %>
+  <%= post.model %>
+  <%= post.year %>
+  <%= post.trim %>
   <%= link_to 'Show', post %>
   <%= link_to 'Edit', edit_post_path(post) %>
   <%= link_to 'Destroy', post, method: :delete, data: {confirm: 'Are you sure?' } %>

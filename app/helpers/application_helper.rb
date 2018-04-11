@@ -15,6 +15,5 @@ module ApplicationHelper
   def self.alert_generator msg
     js add_gritter(msg, title: "Alonso Hernandez Portfolio", sticky: false)
   end
-
   
 end

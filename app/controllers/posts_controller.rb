@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
-  # access all: [:show, :index], user: {except: [:destroy]}
+  access all: [:show, :index], user: {except: [:new, :create, :update, :edit, :destroy]}, site_admin: :all
   
   def index
     @posts = Post.all
@@ -26,7 +26,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.user_id = current_user.id
 
     respond_to do |format|
     if @post.save
