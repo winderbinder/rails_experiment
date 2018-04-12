@@ -15,6 +15,11 @@
 <% if current_user %>
   <%= link_to "Edit CarFo account profile", edit_user_registration_path %>
 <% end %>
+<% if current_user %>
+  <%= link_to 'View your favorites', favorites_path %>
+  <% else %>
+  <% false %>
+<% end %>
     </div>
   </ul>
 </nav>
