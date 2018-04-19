@@ -18,6 +18,7 @@
 <p>
   <strong>Trim:</strong>
   <%= @post.trim %>
+<p class="btn btn-primary"><%= link_to "<button type='button'>Favorite this car?</button>".html_safe, post_path %></p>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %>
