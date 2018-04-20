@@ -15,6 +15,7 @@
   </head>
 
   <body>
+    <div class="container">
             <%= video_tag(
                 "cars.mp4",
                 id: "background",
@@ -30,10 +31,9 @@
             <%= yield %>
             
             <%= render 'shared/footer' %>
-
-            <%= js add_gritter(flash[:notice], title: "Account Status", sticky: false, time: 5000) %>
             
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
+      </div>
   </body>
 </html>
